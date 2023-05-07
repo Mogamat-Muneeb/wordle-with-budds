@@ -54,18 +54,18 @@ function Keyboard() {
 
   console.log(disabledLetters);
   return (
-    <div className="keyboard" onKeyDown={handleKeyboard}>
-      <div className="line1">
+    <div className="w-[700px] h-[300px ] mt-[60px]" onKeyDown={handleKeyboard}>
+      <div className="flex w-full  justify-center m-[5px]">
         {keys1.map((key) => {
           return <Key keyVal={key} disabled={disabledLetters.includes(key)} />;
         })}
       </div>
-      <div className="line2">
+      <div className="flex w-full flex-row  justify-center m-[5px]">
         {keys2.map((key) => {
           return <Key keyVal={key} disabled={disabledLetters.includes(key)} />;
         })}
       </div>
-      <div className="line3">
+      <div className="flex w-full  justify-center m-[5px]">
         <Key keyVal={"ENTER"} bigKey />
         {keys3.map((key) => {
           return <Key keyVal={key} disabled={disabledLetters.includes(key)} />;

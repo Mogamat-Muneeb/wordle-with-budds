@@ -69,8 +69,8 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <nav>
+    <div className="bg-[#121212] text-white h-screen">
+      <nav className="h-[60px] w-full m-0 border-b-slate-200 flex justify-center items-center  text-[45px] font-semibold">
         <h1>Wordle</h1>
       </nav>
       <AppContext.Provider
@@ -88,7 +88,8 @@ function App() {
           gameOver,
         }}
       >
-        <div className="game">
+
+        <div className="w-full flex items-center pt-[50px] flex-col game"  >
           <Board />
           {gameOver.gameOver ? <GameOver /> : <Keyboard />}
           
